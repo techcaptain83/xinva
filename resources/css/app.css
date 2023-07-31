@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '../../vendor/alperenersoy/filament-export/resources/css/filament-export.css';
+
+@import './style.css';
+@import './core.css';
+@import './demo.css';
+@import './scrollbar.css';
+@import './theme.css';
+@import './typeahead.css';
+@import './waves.css';
+
+.tools-dropdown {
+    background-color: #111518 !important;
+}
+.bg-linear {
+    background: linear-gradient(228.7deg, rgba(0, 255, 255, 0.7) 0%, rgba(127, 7, 255, 0.8) 97.81%) !important;
+}
+.h-w-512 {
+    height: 512px !important;
+    width: 512px !important;
+}
+
+.h-w-250 {
+    height: 250px !important;
+    width: 250px !important;
+}
+.tool-option-label:after {
+    content: '∨';
+    position: absolute;
+    right: 1em;
+    color: #fff;
+  }
+
+  .tool-option-input:checked + .tool-option-label:after {
+    content: '∧';
+    line-height: .8em;
+  }
+
+  .accordion__content{
+    max-height: 0em;
+    transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
+  }
+  input[name='panel']:checked ~ .accordion__content {
+    /* Get this as close to what height you expect */
+    max-height: 50em;
+  }
+
+@media screen and (max-width: 480px) {
+    .image-content {
+      overflow-y: scroll;
+    }
+    .ad-banner {
+        font-size: x-small;
+    }
+  }
+@media screen and (max-width: 780px) {
+    .img-list {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 768px) {
+    .main-img-content {
+        order: 2 !important;
+    }
+    .main-tool-content {
+        order: 1 !important;
+    }
+}

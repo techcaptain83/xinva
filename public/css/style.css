@@ -1,0 +1,439 @@
+.pricing-plans-comparison .table tr>th:first-child,
+.pricing-plans-comparison .table tr>td:first-child {
+  white-space: nowrap;
+  text-align: start;
+}
+
+
+.pricing-plans-comparison .table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.price-yearly-toggle {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.light-style .bg-alt-pricing {
+  background-color: #f8f7fa;
+}
+
+.dark-style .bg-alt-pricing {
+  background-color: #25293c;
+}
+
+@media (min-width: 992px) {
+  .pricing-free-trial img {
+    position: absolute;
+    bottom: 0;
+  }
+
+  html:not([dir=rtl]) .pricing-free-trial img {
+    right: 0;
+  }
+
+  [dir=rtl] .pricing-free-trial img {
+    left: 0;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzI jpbInBhZ2VzL3BhZ2UtcHJpY2luZy5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0VBRUUsbUJBQW1CO0VBQ25CLGlCQUFpQjtBQUNuQjtBQUNBO0VBQ0UsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLFlBQVk7RUFDWixPQUFPO0VBQ1AsUUFBUTtBQUNWOztBQUVBO0VBQ0UseUJBQXlCO0FBQzNCOztBQUVBO0VBQ0UseUJBQXlCO0FBQzNCOztBQUVBO0VBQ0U7SUFDRSxrQkFBa0I7SUFDbEIsU0FBUztFQUNYO0VBQ0E7SUFDRSxRQUFRO0VBQ1Y7RUFDQTtJQUNFLE9BQU87RUFDVDtBQUNGIiwiZmlsZSI6InBhZ2VzL3BhZ2UtcHJpY2luZy5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucHJpY2luZy1wbGFucy1jb21wYXJpc29uIC50YWJsZSB0ciA+IHRoOmZpcnN0LWNoaWxkLFxuLnByaWNpbmctcGxhbnMtY29tcGFyaXNvbiAudGFibGUgdHIgPiB0ZDpmaXJzdC1jaGlsZCB7XG4gIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gIHRleHQtYWxpZ246IHN0YXJ0O1xufVxuLnByaWNpbmctcGxhbnMtY29tcGFyaXNvbiAudGFibGUgdGJvZHkgdHI6bGFzdC1jaGlsZCB0ZCB7XG4gIGJvcmRlci1ib3R0b206IDA7XG59XG5cbi5wcmljZS15ZWFybHktdG9nZ2xlIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBtYXJnaW46IGF1dG87XG4gIGxlZnQ6IDA7XG4gIHJpZ2h0OiAwO1xufVxuXG4ubGlnaHQtc3R5bGUgLmJnLWFsdC1wcmljaW5nIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2Y4ZjdmYTtcbn1cblxuLmRhcmstc3R5bGUgLmJnLWFsdC1wcmljaW5nIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzI1MjkzYztcbn1cblxuQG1lZGlhIChtaW4td2lkdGg6IDk5MnB4KSB7XG4gIC5wcmljaW5nLWZyZWUtdHJpYWwgaW1nIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgYm90dG9tOiAwO1xuICB9XG4gIGh0bWw6bm90KFtkaXI9cnRsXSkgLnByaWNpbmctZnJlZS10cmlhbCBpbWcge1xuICAgIHJpZ2h0OiAwO1xuICB9XG4gIFtkaXI9cnRsXSAucHJpY2luZy1mcmVlLXRyaWFsIGltZyB7XG4gICAgbGVmdDogMDtcbiAgfVxufVxuIl19 */
+
+.hero {
+  background-image: url(/image/carosuel/carosuel-1.png);
+  height: 340px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.switch-1 {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 22px;
+}
+
+.switch-1 input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #170F49;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #170F49;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* .aside-2{
+position: absolute;
+    left: -180px;
+}
+
+@media (max-width: 500px) {
+
+ .height {
+  height: 60px !important;
+  padding: 10px;
+} 
+}
+@media (max-width: 1000px) {
+
+  .aside-2{
+ 
+    position: absolute !important;
+    top: 476px !important;
+    width: 465px !important;
+    left: -175px !important;
+    display: flex !important;
+    height: 181px !important;
+    flex-wrap: wrap !important;
+    column-gap: 20px !important;
+
+  }
+  .aside-1 {
+    position: fixed !important;
+  }
+ }
+
+ @media (max-width: 375px) {
+
+  .aside-2{
+    position: absolute !important;
+    top: 246px !important;
+    width: 427px !important;
+    left: -145px !important;
+    display: flex !important;
+    height: 181px !important;
+    flex-wrap: wrap !important;
+    column-gap: 20px !important;
+
+  }
+  .aside-1 {
+    position: fixed !important;
+  }
+ }
+
+ @media (max-width: 700px) {
+
+  .wrapper{
+ 
+    width: 350px !important;
+    font-size: 0.46rem !important;
+    line-height: 1rem;
+}
+
+  } */
+
+@media (max-width: 500px) {
+
+  .wrapper {
+
+    width: 364px !important;
+    font-size: 13px !important;
+    line-height: 1rem;
+  }
+
+}
+
+
+.sidebar-closed {
+  transform: translateX(-64px);
+}
+
+.sidebar-open {
+  transform: translateX(0);
+}
+
+.main-closed {
+  margin-left: 0;
+}
+
+.main-open {
+  margin-left: 64px;
+}
+
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+
+}
+
+/* ///////////////////////////// */
+.background-point {
+  background-image: url(/image/gradient1.png);
+  background-size: 281px;
+  background-repeat: repeat;
+
+
+}
+
+.brandbg {
+  background-color: #2E2E2E;
+}
+
+.imgbg {
+  mix-blend-mode: lighten;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.custom-file-input::before {
+  content: 'Upload Image';
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  width: 40px;
+}
+
+
+.inputwidth {
+  width: 515px;
+}
+
+
+
+@media only screen and (max-width: 500px) {
+  .inputwidth {
+    width: 336px;
+    font-size: 10.5px;
+  }
+
+  .download_icon {
+    position: absolute;
+    left: 275px;
+    top: 159px;
+  }
+
+}
+
+.download_icon {
+  position: absolute;
+  left: 149px;
+  top: 25px;
+}
+
+/* ////////////////////////////////
+ */
+
+.button {
+  position: relative;
+  padding: 8px 16px;
+  background: #009579;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.button:active {
+  background: #007a63;
+}
+
+.button__text {
+  font: bold 15px;
+  color: #ffffff;
+  transition: all 0.2s;
+}
+
+.button--loading .button__text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.button--loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+
+/* navbar */
+@media only screen and (max-width: 700px) {
+  .mobile_navbar {
+    color: #0000 !important;
+  }
+
+}
+
+/* /////////////////////// */
